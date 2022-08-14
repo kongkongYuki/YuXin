@@ -1,0 +1,321 @@
+@prefix : <http://www.yuxin.com/law/ontologies/2022/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.yuxin.com/law/ontologies/2022/> .
+
+<http://www.yuxin.com/law/ontologies/2022/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.yuxin.com/law/ontologies/2022/address
+:address rdf:type owl:ObjectProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Jurisdiction .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/cite
+:cite rdf:type owl:ObjectProperty ;
+      owl:inverseOf :citedBy ;
+      rdf:type owl:FunctionalProperty .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/citeCase
+:citeCase rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :cite ;
+          rdf:type owl:FunctionalProperty ,
+                   owl:InverseFunctionalProperty ;
+          rdfs:domain :Case ;
+          rdfs:range :Case .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/citeStatue
+:citeStatue rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :cite ;
+            rdf:type owl:FunctionalProperty ,
+                     owl:InverseFunctionalProperty ;
+            rdfs:domain :Case ;
+            rdfs:range :Statue .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/citedBy
+:citedBy rdf:type owl:ObjectProperty ,
+                  owl:FunctionalProperty ,
+                  owl:InverseFunctionalProperty ;
+         rdfs:range :Case .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/defendant
+:defendant rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :Case ;
+           rdfs:range :Defendant .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/defendant_sollicitor
+:defendant_sollicitor rdf:type owl:ObjectProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain :Case ;
+                      rdfs:range :Sollicitor .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/deliverDate
+:deliverDate rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Case .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/detail
+:detail rdf:type owl:ObjectProperty ,
+                 owl:FunctionalProperty ;
+        rdfs:domain :Statue .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/email
+:email rdf:type owl:ObjectProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :Jurisdiction .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/hasCaseID
+:hasCaseID rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :hasGraphID ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :Case .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/hasGraphID
+:hasGraphID rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/hasInstrumentID
+:hasInstrumentID rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasGraphID ;
+                 rdf:type owl:FunctionalProperty ;
+                 rdfs:domain :Statue .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/hasJudge
+:hasJudge rdf:type owl:ObjectProperty ;
+          owl:inverseOf :serveAt ;
+          rdf:type owl:FunctionalProperty ,
+                   owl:InverseFunctionalProperty ;
+          rdfs:domain :Jurisdiction ;
+          rdfs:range :Judge .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/hasJudgeID
+:hasJudgeID rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasGraphID ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain :Judge .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/hasLink
+:hasLink rdf:type owl:ObjectProperty ,
+                  owl:FunctionalProperty .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/hasStatueID
+:hasStatueID rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasGraphID ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain :Statue .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/judge
+:judge rdf:type owl:ObjectProperty ;
+       owl:inverseOf :judgedBy ;
+       rdf:type owl:FunctionalProperty ,
+                owl:InverseFunctionalProperty ;
+       rdfs:domain :Judge ;
+       rdfs:range :Case .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/judgedBy
+:judgedBy rdf:type owl:ObjectProperty ,
+                   owl:FunctionalProperty ,
+                   owl:InverseFunctionalProperty ;
+          rdfs:domain :Case ;
+          rdfs:range :Judge .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/jurisdiction
+:jurisdiction rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :Jurisdiction ;
+              rdfs:range :Case .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/openDuring
+:openDuring rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :Jurisdiction .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/phone
+:phone rdf:type owl:ObjectProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :Jurisdiction .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/plaintiff
+:plaintiff rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :Case ;
+           rdfs:range :Plaintiff .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/plantiff_sollicitor
+:plantiff_sollicitor rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain :Case ;
+                     rdfs:range :Sollicitor .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/result
+:result rdf:type owl:ObjectProperty ,
+                 owl:FunctionalProperty ;
+        rdfs:domain :Case .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/serveAt
+:serveAt rdf:type owl:ObjectProperty ,
+                  owl:FunctionalProperty ,
+                  owl:InverseFunctionalProperty ;
+         rdfs:domain :Judge ;
+         rdfs:range :Jurisdiction .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/sollicitor
+:sollicitor rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :Case ;
+            rdfs:range :Sollicitor .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/status
+:status rdf:type owl:ObjectProperty ,
+                 owl:FunctionalProperty ;
+        rdfs:domain :Case .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/title
+:title rdf:type owl:ObjectProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :Case .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/topic
+:topic rdf:type owl:ObjectProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :Case .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/uploadDate
+:uploadDate rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain :Case .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/versionOf
+:versionOf rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/year
+:year rdf:type owl:ObjectProperty ,
+               owl:FunctionalProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.yuxin.com/law/ontologies/2022/Act
+:Act rdf:type owl:Class ;
+     rdfs:subClassOf :Statue .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/Case
+:Case rdf:type owl:Class .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/Convention
+:Convention rdf:type owl:Class ;
+            rdfs:subClassOf :Statue .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/Defendant
+:Defendant rdf:type owl:Class ;
+           rdfs:subClassOf :Person .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/Directive
+:Directive rdf:type owl:Class ;
+           rdfs:subClassOf :Statue .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/Instrument
+:Instrument rdf:type owl:Class ;
+            rdfs:subClassOf :Statue .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/IrishAppealCourt
+:IrishAppealCourt rdf:type owl:Class ;
+                  rdfs:subClassOf :Jurisdiction ;
+                  owl:disjointWith :IrishHighCourt ,
+                                   :IrishSupremeCourt .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/IrishHighCourt
+:IrishHighCourt rdf:type owl:Class ;
+                rdfs:subClassOf :Jurisdiction ;
+                owl:disjointWith :IrishSupremeCourt .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/IrishSupremeCourt
+:IrishSupremeCourt rdf:type owl:Class ;
+                   rdfs:subClassOf :Jurisdiction .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/Judge
+:Judge rdf:type owl:Class ;
+       rdfs:subClassOf :Person .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/Jurisdiction
+:Jurisdiction rdf:type owl:Class .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/Person
+:Person rdf:type owl:Class .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/Plaintiff
+:Plaintiff rdf:type owl:Class ;
+           rdfs:subClassOf :Person .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/Regulation
+:Regulation rdf:type owl:Class ;
+            rdfs:subClassOf :Statue .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/Sollicitor
+:Sollicitor rdf:type owl:Class ;
+            rdfs:subClassOf :Person .
+
+
+###  http://www.yuxin.com/law/ontologies/2022/Statue
+:Statue rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

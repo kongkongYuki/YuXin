@@ -1,0 +1,273 @@
+<http://www.yuxin.com/law/ontologies/2022/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.yuxin.com/law/ontologies/2022/address
+<http://www.yuxin.com/law/ontologies/2022/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/address> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Jurisdiction> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/cite
+<http://www.yuxin.com/law/ontologies/2022/cite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/cite> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.yuxin.com/law/ontologies/2022/citedBy> .
+<http://www.yuxin.com/law/ontologies/2022/cite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/citeCase
+<http://www.yuxin.com/law/ontologies/2022/citeCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/citeCase> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.yuxin.com/law/ontologies/2022/cite> .
+<http://www.yuxin.com/law/ontologies/2022/citeCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/citeCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/citeCase> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Case> .
+<http://www.yuxin.com/law/ontologies/2022/citeCase> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.yuxin.com/law/ontologies/2022/Case> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/citeStatue
+<http://www.yuxin.com/law/ontologies/2022/citeStatue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/citeStatue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.yuxin.com/law/ontologies/2022/cite> .
+<http://www.yuxin.com/law/ontologies/2022/citeStatue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/citeStatue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/citeStatue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Case> .
+<http://www.yuxin.com/law/ontologies/2022/citeStatue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.yuxin.com/law/ontologies/2022/Statue> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/citedBy
+<http://www.yuxin.com/law/ontologies/2022/citedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/citedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/citedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/citedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.yuxin.com/law/ontologies/2022/Case> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/defendant
+<http://www.yuxin.com/law/ontologies/2022/defendant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/defendant> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/defendant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/defendant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Case> .
+<http://www.yuxin.com/law/ontologies/2022/defendant> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.yuxin.com/law/ontologies/2022/Defendant> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/defendant_sollicitor
+<http://www.yuxin.com/law/ontologies/2022/defendant_sollicitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/defendant_sollicitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/defendant_sollicitor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Case> .
+<http://www.yuxin.com/law/ontologies/2022/defendant_sollicitor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.yuxin.com/law/ontologies/2022/Sollicitor> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/deliverDate
+<http://www.yuxin.com/law/ontologies/2022/deliverDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/deliverDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/deliverDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Case> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/detail
+<http://www.yuxin.com/law/ontologies/2022/detail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/detail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/detail> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Statue> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/email
+<http://www.yuxin.com/law/ontologies/2022/email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/email> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Jurisdiction> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/hasCaseID
+<http://www.yuxin.com/law/ontologies/2022/hasCaseID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/hasCaseID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.yuxin.com/law/ontologies/2022/hasGraphID> .
+<http://www.yuxin.com/law/ontologies/2022/hasCaseID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/hasCaseID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Case> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/hasGraphID
+<http://www.yuxin.com/law/ontologies/2022/hasGraphID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/hasGraphID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/hasInstrumentID
+<http://www.yuxin.com/law/ontologies/2022/hasInstrumentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/hasInstrumentID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.yuxin.com/law/ontologies/2022/hasGraphID> .
+<http://www.yuxin.com/law/ontologies/2022/hasInstrumentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/hasInstrumentID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Statue> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/hasJudge
+<http://www.yuxin.com/law/ontologies/2022/hasJudge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/hasJudge> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.yuxin.com/law/ontologies/2022/serveAt> .
+<http://www.yuxin.com/law/ontologies/2022/hasJudge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/hasJudge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/hasJudge> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Jurisdiction> .
+<http://www.yuxin.com/law/ontologies/2022/hasJudge> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.yuxin.com/law/ontologies/2022/Judge> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/hasJudgeID
+<http://www.yuxin.com/law/ontologies/2022/hasJudgeID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/hasJudgeID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.yuxin.com/law/ontologies/2022/hasGraphID> .
+<http://www.yuxin.com/law/ontologies/2022/hasJudgeID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/hasJudgeID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Judge> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/hasLink
+<http://www.yuxin.com/law/ontologies/2022/hasLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/hasLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/hasStatueID
+<http://www.yuxin.com/law/ontologies/2022/hasStatueID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/hasStatueID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.yuxin.com/law/ontologies/2022/hasGraphID> .
+<http://www.yuxin.com/law/ontologies/2022/hasStatueID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/hasStatueID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Statue> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/judge
+<http://www.yuxin.com/law/ontologies/2022/judge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/judge> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.yuxin.com/law/ontologies/2022/judgedBy> .
+<http://www.yuxin.com/law/ontologies/2022/judge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/judge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/judge> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Judge> .
+<http://www.yuxin.com/law/ontologies/2022/judge> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.yuxin.com/law/ontologies/2022/Case> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/judgedBy
+<http://www.yuxin.com/law/ontologies/2022/judgedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/judgedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/judgedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/judgedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Case> .
+<http://www.yuxin.com/law/ontologies/2022/judgedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.yuxin.com/law/ontologies/2022/Judge> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/jurisdiction
+<http://www.yuxin.com/law/ontologies/2022/jurisdiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/jurisdiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/jurisdiction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Jurisdiction> .
+<http://www.yuxin.com/law/ontologies/2022/jurisdiction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.yuxin.com/law/ontologies/2022/Case> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/openDuring
+<http://www.yuxin.com/law/ontologies/2022/openDuring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/openDuring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/openDuring> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Jurisdiction> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/phone
+<http://www.yuxin.com/law/ontologies/2022/phone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/phone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/phone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Jurisdiction> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/plaintiff
+<http://www.yuxin.com/law/ontologies/2022/plaintiff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/plaintiff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/plaintiff> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Case> .
+<http://www.yuxin.com/law/ontologies/2022/plaintiff> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.yuxin.com/law/ontologies/2022/Plaintiff> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/plantiff_sollicitor
+<http://www.yuxin.com/law/ontologies/2022/plantiff_sollicitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/plantiff_sollicitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/plantiff_sollicitor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Case> .
+<http://www.yuxin.com/law/ontologies/2022/plantiff_sollicitor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.yuxin.com/law/ontologies/2022/Sollicitor> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/result
+<http://www.yuxin.com/law/ontologies/2022/result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/result> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Case> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/serveAt
+<http://www.yuxin.com/law/ontologies/2022/serveAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/serveAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/serveAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/serveAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Judge> .
+<http://www.yuxin.com/law/ontologies/2022/serveAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.yuxin.com/law/ontologies/2022/Jurisdiction> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/sollicitor
+<http://www.yuxin.com/law/ontologies/2022/sollicitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/sollicitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/sollicitor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Case> .
+<http://www.yuxin.com/law/ontologies/2022/sollicitor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.yuxin.com/law/ontologies/2022/Sollicitor> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/status
+<http://www.yuxin.com/law/ontologies/2022/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/status> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Case> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/title
+<http://www.yuxin.com/law/ontologies/2022/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/title> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Case> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/topic
+<http://www.yuxin.com/law/ontologies/2022/topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/topic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Case> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/uploadDate
+<http://www.yuxin.com/law/ontologies/2022/uploadDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/uploadDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/uploadDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.yuxin.com/law/ontologies/2022/uploadDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.yuxin.com/law/ontologies/2022/Case> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/versionOf
+<http://www.yuxin.com/law/ontologies/2022/versionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/versionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/year
+<http://www.yuxin.com/law/ontologies/2022/year> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.yuxin.com/law/ontologies/2022/year> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.yuxin.com/law/ontologies/2022/Act
+<http://www.yuxin.com/law/ontologies/2022/Act> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.yuxin.com/law/ontologies/2022/Act> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.yuxin.com/law/ontologies/2022/Statue> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/Case
+<http://www.yuxin.com/law/ontologies/2022/Case> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/Convention
+<http://www.yuxin.com/law/ontologies/2022/Convention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.yuxin.com/law/ontologies/2022/Convention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.yuxin.com/law/ontologies/2022/Statue> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/Defendant
+<http://www.yuxin.com/law/ontologies/2022/Defendant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.yuxin.com/law/ontologies/2022/Defendant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.yuxin.com/law/ontologies/2022/Person> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/Directive
+<http://www.yuxin.com/law/ontologies/2022/Directive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.yuxin.com/law/ontologies/2022/Directive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.yuxin.com/law/ontologies/2022/Statue> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/Instrument
+<http://www.yuxin.com/law/ontologies/2022/Instrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.yuxin.com/law/ontologies/2022/Instrument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.yuxin.com/law/ontologies/2022/Statue> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/IrishAppealCourt
+<http://www.yuxin.com/law/ontologies/2022/IrishAppealCourt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.yuxin.com/law/ontologies/2022/IrishAppealCourt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.yuxin.com/law/ontologies/2022/Jurisdiction> .
+<http://www.yuxin.com/law/ontologies/2022/IrishAppealCourt> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.yuxin.com/law/ontologies/2022/IrishHighCourt> .
+<http://www.yuxin.com/law/ontologies/2022/IrishAppealCourt> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.yuxin.com/law/ontologies/2022/IrishSupremeCourt> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/IrishHighCourt
+<http://www.yuxin.com/law/ontologies/2022/IrishHighCourt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.yuxin.com/law/ontologies/2022/IrishHighCourt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.yuxin.com/law/ontologies/2022/Jurisdiction> .
+<http://www.yuxin.com/law/ontologies/2022/IrishHighCourt> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.yuxin.com/law/ontologies/2022/IrishSupremeCourt> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/IrishSupremeCourt
+<http://www.yuxin.com/law/ontologies/2022/IrishSupremeCourt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.yuxin.com/law/ontologies/2022/IrishSupremeCourt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.yuxin.com/law/ontologies/2022/Jurisdiction> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/Judge
+<http://www.yuxin.com/law/ontologies/2022/Judge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.yuxin.com/law/ontologies/2022/Judge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.yuxin.com/law/ontologies/2022/Person> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/Jurisdiction
+<http://www.yuxin.com/law/ontologies/2022/Jurisdiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/Person
+<http://www.yuxin.com/law/ontologies/2022/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/Plaintiff
+<http://www.yuxin.com/law/ontologies/2022/Plaintiff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.yuxin.com/law/ontologies/2022/Plaintiff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.yuxin.com/law/ontologies/2022/Person> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/Regulation
+<http://www.yuxin.com/law/ontologies/2022/Regulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.yuxin.com/law/ontologies/2022/Regulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.yuxin.com/law/ontologies/2022/Statue> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/Sollicitor
+<http://www.yuxin.com/law/ontologies/2022/Sollicitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.yuxin.com/law/ontologies/2022/Sollicitor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.yuxin.com/law/ontologies/2022/Person> .
+# 
+# http://www.yuxin.com/law/ontologies/2022/Statue
+<http://www.yuxin.com/law/ontologies/2022/Statue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

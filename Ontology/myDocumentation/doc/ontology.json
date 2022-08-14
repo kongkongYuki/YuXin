@@ -1,0 +1,348 @@
+[ {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/Act",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Statue"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/Case",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/Convention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Statue"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/Defendant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Person"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/Directive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Statue"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/Instrument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Statue"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/IrishAppealCourt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Jurisdiction"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/IrishHighCourt"
+  }, {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/IrishSupremeCourt"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/IrishHighCourt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Jurisdiction"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/IrishSupremeCourt"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/IrishSupremeCourt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Jurisdiction"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/Judge",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Person"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/Jurisdiction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/Plaintiff",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Person"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/Regulation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Statue"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/Sollicitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Person"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/Statue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/address",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Jurisdiction"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/cite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/citedBy"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/citeCase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/cite"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/citeStatue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Statue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/cite"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/citedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/defendant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Defendant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/defendant_sollicitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Sollicitor"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/deliverDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/detail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Statue"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/email",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Jurisdiction"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/hasCaseID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/hasGraphID"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/hasGraphID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/hasInstrumentID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Statue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/hasGraphID"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/hasJudge",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Jurisdiction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Judge"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/serveAt"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/hasJudgeID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Judge"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/hasGraphID"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/hasLink",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/hasStatueID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Statue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/hasGraphID"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/judge",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Judge"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/judgedBy"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/judgedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Judge"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/jurisdiction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Jurisdiction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/openDuring",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Jurisdiction"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/phone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Jurisdiction"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/plaintiff",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Plaintiff"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/plantiff_sollicitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Sollicitor"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/result",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/serveAt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Judge"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Jurisdiction"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/sollicitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Sollicitor"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/topic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/uploadDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.yuxin.com/law/ontologies/2022/Case"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/versionOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ]
+}, {
+  "@id" : "http://www.yuxin.com/law/ontologies/2022/year",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ]
+} ]

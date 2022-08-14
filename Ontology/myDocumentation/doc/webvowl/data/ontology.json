@@ -1,0 +1,829 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "baseIris" : [ "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.yuxin.com/law/ontologies/2022" ],
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "9",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "11",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "19",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/Act",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Act"
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/Defendant",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Defendant"
+    },
+    "id" : "14",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/Plaintiff",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Plaintiff"
+    },
+    "id" : "20",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/Statue",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Statue"
+    },
+    "subClasses" : [ "0", "21", "22", "23", "24" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/Jurisdiction",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Jurisdiction"
+    },
+    "subClasses" : [ "25", "26", "27" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/Directive",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Directive"
+    },
+    "id" : "24",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/Sollicitor",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sollicitor"
+    },
+    "id" : "44",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/Case",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Case"
+    },
+    "id" : "3"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/IrishAppealCourt",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IrishAppealCourt"
+    },
+    "id" : "26",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/Convention",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Convention"
+    },
+    "id" : "21",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "7",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "9",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "11",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "19",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/Judge",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Judge"
+    },
+    "id" : "4",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "49",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/Person",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "subClasses" : [ "14", "44", "4", "20" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/IrishSupremeCourt",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IrishSupremeCourt"
+    },
+    "id" : "25",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/IrishHighCourt",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IrishHighCourt"
+    },
+    "id" : "27",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/Regulation",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Regulation"
+    },
+    "id" : "23",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/Instrument",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Instrument"
+    },
+    "id" : "22",
+    "superClasses" : [ "1" ]
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "62",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/judgedBy",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "judgedBy"
+    },
+    "domain" : "3",
+    "attributes" : [ "inverse functional", "object", "functional" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/openDuring",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "openDuring"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "functional" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/detail",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "detail"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "functional" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "11",
+    "subproperty" : [ "12", "13" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/serveAt",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "serveAt"
+    },
+    "domain" : "4",
+    "attributes" : [ "inverse functional", "object", "functional" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/year",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "year"
+    },
+    "domain" : "11",
+    "attributes" : [ "object", "functional" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/citedBy",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "citedBy"
+    },
+    "domain" : "19",
+    "attributes" : [ "inverse functional", "object", "functional" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/phone",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "phone"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "functional" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/result",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "result"
+    },
+    "domain" : "3",
+    "attributes" : [ "object", "functional" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/uploadDate",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "uploadDate"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "3",
+    "attributes" : [ "object", "functional" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/defendant",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "defendant"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "3",
+    "attributes" : [ "object", "functional" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/hasGraphID",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasGraphID"
+    },
+    "domain" : "11",
+    "subproperty" : [ "31", "32", "33", "34" ],
+    "attributes" : [ "object", "functional" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/topic",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "topic"
+    },
+    "domain" : "3",
+    "attributes" : [ "object", "functional" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/deliverDate",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "deliverDate"
+    },
+    "domain" : "3",
+    "attributes" : [ "object", "functional" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/email",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "email"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "functional" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/plaintiff",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "plaintiff"
+    },
+    "domain" : "3",
+    "attributes" : [ "object", "functional" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/citeCase",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "citeCase"
+    },
+    "superproperty" : [ "40" ],
+    "domain" : "3",
+    "attributes" : [ "inverse functional", "object", "functional" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/hasJudge",
+    "inverse" : "16",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasJudge"
+    },
+    "domain" : "6",
+    "attributes" : [ "inverse functional", "object", "functional" ],
+    "id" : "41"
+  }, {
+    "range" : "15",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  }, {
+    "range" : "15",
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
+  }, {
+    "range" : "15",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "45"
+  }, {
+    "range" : "6",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/jurisdiction",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "jurisdiction"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "functional" ],
+    "id" : "47"
+  }, {
+    "range" : "6",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/hasJudgeID",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "hasJudgeID"
+    },
+    "superproperty" : [ "30" ],
+    "domain" : "4",
+    "attributes" : [ "object", "functional" ],
+    "id" : "33"
+  }, {
+    "range" : "15",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "50"
+  }, {
+    "range" : "6",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "range" : "1",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "52"
+  }, {
+    "range" : "1",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "53"
+  }, {
+    "range" : "1",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/sollicitor",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "sollicitor"
+    },
+    "domain" : "3",
+    "attributes" : [ "object", "functional" ],
+    "id" : "55"
+  }, {
+    "range" : "25",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/hasLink",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasLink"
+    },
+    "domain" : "11",
+    "attributes" : [ "object", "functional" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/status",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "status"
+    },
+    "domain" : "3",
+    "attributes" : [ "object", "functional" ],
+    "id" : "58"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "59"
+  }, {
+    "range" : "1",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/hasInstrumentID",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasInstrumentID"
+    },
+    "superproperty" : [ "30" ],
+    "domain" : "1",
+    "attributes" : [ "object", "functional" ],
+    "id" : "31"
+  }, {
+    "range" : "27",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "61"
+  }, {
+    "range" : "25",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/hasCaseID",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasCaseID"
+    },
+    "superproperty" : [ "30" ],
+    "domain" : "3",
+    "attributes" : [ "object", "functional" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/title",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "title"
+    },
+    "domain" : "3",
+    "attributes" : [ "object", "functional" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/versionOf",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "versionOf"
+    },
+    "domain" : "11",
+    "attributes" : [ "object", "functional" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/citeStatue",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "citeStatue"
+    },
+    "superproperty" : [ "40" ],
+    "domain" : "3",
+    "attributes" : [ "inverse functional", "object", "functional" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/hasStatueID",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasStatueID"
+    },
+    "superproperty" : [ "30" ],
+    "domain" : "1",
+    "attributes" : [ "object", "functional" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/plantiff_sollicitor",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "plantiff_sollicitor"
+    },
+    "domain" : "3",
+    "attributes" : [ "object", "functional" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/defendant_sollicitor",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "defendant_sollicitor"
+    },
+    "domain" : "3",
+    "attributes" : [ "object", "functional" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/judge",
+    "inverse" : "2",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "judge"
+    },
+    "domain" : "4",
+    "attributes" : [ "inverse functional", "object", "functional" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/cite",
+    "inverse" : "18",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "cite"
+    },
+    "domain" : "3",
+    "subproperty" : [ "65", "39" ],
+    "attributes" : [ "object", "functional" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://www.yuxin.com/law/ontologies/2022/address",
+    "baseIri" : "http://www.yuxin.com/law/ontologies/2022",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "address"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "functional" ],
+    "id" : "69"
+  } ]
+}

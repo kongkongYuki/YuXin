@@ -1,0 +1,456 @@
+{
+    "p16706": {
+        "Label": "2021_IECA_248",
+        "Title": "Fennell -v- Corrigan",
+        "Court": "Court of Appeal",
+        "Result": "Appeal Dismissed",
+        "Status": "Approved",
+        "Link": "https://www.courts.ie/view/judgments/69a84179-1f18-4689-99b7-323de33fbee0/ab286c43-e84f-4b38-932d-6ed485c16356/2021_IECA_248.pdf/pdf",
+        "Topic": "9",
+        "Judge": [
+            {
+                "name": "Whelan J.",
+                "link": "https://en.wikipedia.org//wiki/M%C3%A1ire_Whelan"
+            },
+            {
+                "name": "Murray J.",
+                "link": "https://en.wikipedia.org//wiki/Brian_Murray_(judge)"
+            },
+            {
+                "name": "Haughton J.",
+                "link": "https://en.wikipedia.org//wiki/Robert_Haughton"
+            }
+        ],
+        "Citation": [
+            {
+                "name": "2019_IESC_28",
+                "link": null
+            },
+            {
+                "name": "2014_IEHC_266",
+                "link": null
+            },
+            {
+                "name": "2018_IEHC_379",
+                "link": null
+            },
+            {
+                "name": "2013_IEHC_130",
+                "link": null
+            },
+            {
+                "name": "2019_IEHC_651",
+                "link": null
+            },
+            {
+                "name": "2019_IESC_2",
+                "link": null
+            },
+            {
+                "name": "2013_IESC_16",
+                "link": null
+            },
+            {
+                "name": "2009_IESC_2",
+                "link": null
+            },
+            {
+                "name": "2015_IEHC_591",
+                "link": null
+            },
+            {
+                "name": "2005_IEHC_449",
+                "link": null
+            },
+            {
+                "name": "2019_IESC_12",
+                "link": null
+            },
+            {
+                "name": "2017_IESC_31",
+                "link": null
+            },
+            {
+                "name": "2012_IEHC_228",
+                "link": null
+            },
+            {
+                "name": "2020_IEHC_677",
+                "link": null
+            },
+            {
+                "name": "2020_IEHC_79",
+                "link": null
+            },
+            {
+                "name": "1932_NZLR_195",
+                "link": null
+            },
+            {
+                "name": "2020_IECA_92",
+                "link": null
+            },
+            {
+                "name": "2005_IESC_12",
+                "link": null
+            },
+            {
+                "name": "2020_IECA_167",
+                "link": null
+            },
+            {
+                "name": "1985_ILRM_109",
+                "link": null
+            }
+        ],
+        "Statue": [
+            {
+                "name": "European Convention",
+                "link": null
+            },
+            {
+                "name": "Consumer Credit Act",
+                "link": null
+            },
+            {
+                "name": "Central Bank Act",
+                "link": null
+            },
+            {
+                "name": "Conveyancing Act",
+                "link": null
+            },
+            {
+                "name": "Land and Conveyancing Law Reform Act 2009",
+                "link": "https://www.irishstatutebook.ie/2009/en/si/0356.html?q=Land+and+Conveyancing+Law+Reform+Act&years=2009"
+            }
+        ]
+    },
+    "p52295": {
+        "Label": "2022_IEHC_311",
+        "Title": "Tyrrell & Anor -v- Mulligan",
+        "Court": "High Court",
+        "Result": null,
+        "Status": "Approved",
+        "Link": "https://www.courts.ie/view/judgments/0b328db0-67c6-4550-91b4-5e771567fb19/dcf17af2-2a3d-44ba-8827-db4e93adc493/2022_IEHC_311.pdf/pdf",
+        "Topic": "9",
+        "Judge": [
+            {
+                "name": "Butler J.",
+                "link": "https://en.wikipedia.org//wiki/Nuala_Butler"
+            }
+        ],
+        "Citation": [
+            {
+                "name": "2019_IESC_65",
+                "link": null
+            },
+            {
+                "name": "2021_IECA_248",
+                "link": "https://www.courts.ie/view/judgments/69a84179-1f18-4689-99b7-323de33fbee0/ab286c43-e84f-4b38-932d-6ed485c16356/2021_IECA_248.pdf/pdf"
+            },
+            {
+                "name": "2017_IEHC_155",
+                "link": null
+            },
+            {
+                "name": "2018_IEHC_379",
+                "link": null
+            },
+            {
+                "name": "2013_IEHC_130",
+                "link": null
+            },
+            {
+                "name": "2019_IEHC_651",
+                "link": null
+            },
+            {
+                "name": "2019_IESC_2",
+                "link": null
+            }
+        ],
+        "Statue": [
+            {
+                "name": "Asset Covered Securities Act 2001",
+                "link": "https://www.irishstatutebook.ie/2001/en/act/pub/0047/index.html?q=Asset+Covered+Securities+Act&years=2001"
+            },
+            {
+                "name": "Central Bank Act",
+                "link": null
+            },
+            {
+                "name": "Conveyancing Act",
+                "link": null
+            }
+        ]
+    },
+    "c57113": [
+        {
+            "name": "Conveyancing Act",
+            "link": null
+        }
+    ],
+    "p33045": {
+        "Label": "2022_IEHC_246",
+        "Title": "O'Brien & Ors -v- McMahon & Anor",
+        "Court": "High Court",
+        "Result": "\"Orders for possession and related orders were granted where, applying the approach to interpretation of a deed of appointment of a receiver as set out in Fennell v. Corrigan [2021] IECA 248, the receiver had been validly appointed and where, although arguments were made to the effect that the borrowers acted as consumers, no consequential invalidity in the securities or related facilities had been identified by the defendant.\"",
+        "Status": "Approved",
+        "Link": "https://www.courts.ie/view/judgments/b3121482-08f9-4eac-931e-51e7618d3133/0c6a5d9f-ee04-40b8-93bb-90386ce93702/2022_IEHC_246.pdf/pdf",
+        "Topic": "9",
+        "Judge": [
+            {
+                "name": "Stack J.",
+                "link": "https://en.wikipedia.org//wiki/Siobh%C3%A1n_Stack"
+            }
+        ],
+        "Citation": [
+            {
+                "name": "2019_IESC_28",
+                "link": null
+            },
+            {
+                "name": "2005_IESC_89",
+                "link": null
+            },
+            {
+                "name": "2021_IECA_248",
+                "link": "https://www.courts.ie/view/judgments/69a84179-1f18-4689-99b7-323de33fbee0/ab286c43-e84f-4b38-932d-6ed485c16356/2021_IECA_248.pdf/pdf"
+            },
+            {
+                "name": "2018_IEHC_379",
+                "link": null
+            },
+            {
+                "name": "2019_IEHC_651",
+                "link": null
+            },
+            {
+                "name": "2020_IECA_167",
+                "link": null
+            }
+        ],
+        "Statue": [
+            {
+                "name": "Consumer Contracts Regulations",
+                "link": null
+            },
+            {
+                "name": "Registration of Title Act",
+                "link": null
+            },
+            {
+                "name": "European Communities (Capital Adequacy of Investment Firms) Regulations",
+                "link": null
+            }
+        ]
+    },
+    "p61155": {
+        "Label": "2022_IEHC_274",
+        "Title": "Tyrrell -v- O'Connor & Anor",
+        "Court": "High Court",
+        "Result": "\"An interlocutory injunction application by a receiver seeking possession of registered lands subject to a charge was refused on the grounds that the receiver's stated purpose in seeking possession was to sell the lands but he did not enjoy a power of sale.  Furthermore, the application amounted to an attempt to obtain summary judgment by means of an interlocutory injunction.\"",
+        "Status": "Approved",
+        "Link": "https://www.courts.ie/view/judgments/f577ae4a-0db3-4f65-9aeb-54bc38004d8c/fc92121d-cd6a-4a89-b9a1-7407e474b44c/2022_IEHC_274.pdf/pdf",
+        "Topic": "9",
+        "Judge": [
+            {
+                "name": "Stack J.",
+                "link": "https://en.wikipedia.org//wiki/Siobh%C3%A1n_Stack"
+            }
+        ],
+        "Citation": [
+            {
+                "name": "2019_IESC_28",
+                "link": null
+            },
+            {
+                "name": "2021_IECA_248",
+                "link": "https://www.courts.ie/view/judgments/69a84179-1f18-4689-99b7-323de33fbee0/ab286c43-e84f-4b38-932d-6ed485c16356/2021_IECA_248.pdf/pdf"
+            },
+            {
+                "name": "2021_IECA_292",
+                "link": "https://www.courts.ie/view/judgments/cf51abcd-f97d-4da0-a1f7-55a4f1aa62eb/185033bd-5901-4ca9-b17b-6ab33e402b50/2021_IECA_292.pdf/pdf"
+            },
+            {
+                "name": "2018_IEHC_379",
+                "link": null
+            },
+            {
+                "name": "2019_IEHC_651",
+                "link": null
+            },
+            {
+                "name": "2021_IEHC_746",
+                "link": "https://www.courts.ie/view/judgments/4b4e8007-e4ad-4138-a9dc-ec2c1cd847b6/cf4e5484-b946-423c-a535-a32e11cbe400/2021_IEHC_746.pdf/pdf"
+            },
+            {
+                "name": "2019_IEHC_605",
+                "link": null
+            },
+            {
+                "name": "2011_IEHC_348",
+                "link": null
+            },
+            {
+                "name": "2019_IEHC_639",
+                "link": null
+            }
+        ],
+        "Statue": [
+            {
+                "name": "Civil Liability and Courts Act",
+                "link": null
+            },
+            {
+                "name": "Courts (Supplemental Provisions) Act 1961",
+                "link": null
+            },
+            {
+                "name": "Courts Act",
+                "link": null
+            },
+            {
+                "name": "Conveyancing Act",
+                "link": null
+            },
+            {
+                "name": "Land and Conveyancing Law Reform Act",
+                "link": null
+            },
+            {
+                "name": "Registration of Title Act",
+                "link": null
+            },
+            {
+                "name": "General Data Protection Regulation",
+                "link": null
+            }
+        ]
+    },
+    "p6114": {
+        "Label": "2021_IEHC_638",
+        "Title": "Foley -v- Promontoria (Oyster) DAC & Anor",
+        "Court": "High Court",
+        "Result": "\"A receiver was shown to have been validly appointed where the assignee of original lender, a Designated Activity Company, had become registered as owner of the relevant charge, where the debenture permitted appointment under hand, and where the relevant document of appointment had been signed by a Director of the DAC as permitted by s. 48 of the Companies Act, 2014.\"",
+        "Status": "Approved",
+        "Link": "https://www.courts.ie/view/judgments/ceaf7da1-bc6a-493a-8e53-2a42bcc587a7/6540cc66-117c-43ca-9560-a25e7c127659/2021_IEHC_638.pdf/pdf",
+        "Topic": "9",
+        "Judge": [
+            {
+                "name": "Stack J.",
+                "link": "https://en.wikipedia.org//wiki/Siobh%C3%A1n_Stack"
+            }
+        ],
+        "Citation": [
+            {
+                "name": "2013_IEHC_130",
+                "link": null
+            },
+            {
+                "name": "2015_IEHC_591",
+                "link": null
+            },
+            {
+                "name": "2020_IEHC_534",
+                "link": null
+            },
+            {
+                "name": "2016_IEHC_662",
+                "link": null
+            }
+        ],
+        "Statue": [
+            {
+                "name": "Conveyancing Act",
+                "link": null
+            },
+            {
+                "name": "Land and Conveyancing Law Reform Act",
+                "link": null
+            },
+            {
+                "name": "Registration of Title Act",
+                "link": null
+            }
+        ]
+    },
+    "c4377": [
+        {
+            "name": "Central Bank Act",
+            "link": null
+        }
+    ],
+    "p41656": {
+        "Label": "2022_IEHC_218",
+        "Title": "O'Reilly & Anor -v- Promontoria [Finn] Ltd & Ors",
+        "Court": "High Court",
+        "Result": null,
+        "Status": "Approved",
+        "Link": "https://www.courts.ie/view/judgments/7329cb15-43d3-4f46-9325-cff09f34b749/a18b216c-85e6-41a5-a343-3900091a850a/2022_IEHC_218.pdf/pdf",
+        "Topic": "9",
+        "Judge": [
+            {
+                "name": "Egan J.",
+                "link": "https://en.wikipedia.org//wiki/Emily_Egan"
+            }
+        ],
+        "Citation": [
+            {
+                "name": "2019_IESC_65",
+                "link": null
+            },
+            {
+                "name": "2018_IEHC_379",
+                "link": null
+            },
+            {
+                "name": "2021_IEHC_638",
+                "link": "https://www.courts.ie/view/judgments/ceaf7da1-bc6a-493a-8e53-2a42bcc587a7/6540cc66-117c-43ca-9560-a25e7c127659/2021_IEHC_638.pdf/pdf"
+            },
+            {
+                "name": "2015_IEHC_591",
+                "link": null
+            },
+            {
+                "name": "2021_IECA_38",
+                "link": null
+            },
+            {
+                "name": "2014_IEHC_629",
+                "link": null
+            },
+            {
+                "name": "2020_IEHC_677",
+                "link": null
+            },
+            {
+                "name": "2017_IEHC_515",
+                "link": null
+            },
+            {
+                "name": "2020_IEHC_484",
+                "link": null
+            },
+            {
+                "name": "2021_IEHC_7",
+                "link": null
+            }
+        ],
+        "Statue": [
+            {
+                "name": "Conveyancing Act",
+                "link": null
+            },
+            {
+                "name": "Companies Act",
+                "link": null
+            },
+            {
+                "name": "Registration of Title Act 1964",
+                "link": null
+            }
+        ]
+    }
+}

@@ -1,0 +1,482 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.yuxin.com/law/ontologies/2022/"
+     xml:base="http://www.yuxin.com/law/ontologies/2022/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.yuxin.com/law/ontologies/2022/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/address -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/address">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Jurisdiction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/cite -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/cite">
+        <owl:inverseOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/citedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/citeCase -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/citeCase">
+        <rdfs:subPropertyOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/cite"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+        <rdfs:range rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/citeStatue -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/citeStatue">
+        <rdfs:subPropertyOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/cite"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+        <rdfs:range rdf:resource="http://www.yuxin.com/law/ontologies/2022/Statue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/citedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/citedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/defendant -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/defendant">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+        <rdfs:range rdf:resource="http://www.yuxin.com/law/ontologies/2022/Defendant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/defendant_sollicitor -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/defendant_sollicitor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+        <rdfs:range rdf:resource="http://www.yuxin.com/law/ontologies/2022/Sollicitor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/deliverDate -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/deliverDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/detail -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/detail">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Statue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/email -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/email">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Jurisdiction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/hasCaseID -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/hasCaseID">
+        <rdfs:subPropertyOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/hasGraphID"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/hasGraphID -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/hasGraphID">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/hasInstrumentID -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/hasInstrumentID">
+        <rdfs:subPropertyOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/hasGraphID"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Statue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/hasJudge -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/hasJudge">
+        <owl:inverseOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/serveAt"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Jurisdiction"/>
+        <rdfs:range rdf:resource="http://www.yuxin.com/law/ontologies/2022/Judge"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/hasJudgeID -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/hasJudgeID">
+        <rdfs:subPropertyOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/hasGraphID"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Judge"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/hasLink -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/hasLink">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/hasStatueID -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/hasStatueID">
+        <rdfs:subPropertyOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/hasGraphID"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Statue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/judge -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/judge">
+        <owl:inverseOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/judgedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Judge"/>
+        <rdfs:range rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/judgedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/judgedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+        <rdfs:range rdf:resource="http://www.yuxin.com/law/ontologies/2022/Judge"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/jurisdiction -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/jurisdiction">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Jurisdiction"/>
+        <rdfs:range rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/openDuring -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/openDuring">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Jurisdiction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/phone -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/phone">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Jurisdiction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/plaintiff -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/plaintiff">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+        <rdfs:range rdf:resource="http://www.yuxin.com/law/ontologies/2022/Plaintiff"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/plantiff_sollicitor -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/plantiff_sollicitor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+        <rdfs:range rdf:resource="http://www.yuxin.com/law/ontologies/2022/Sollicitor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/result -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/result">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/serveAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/serveAt">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Judge"/>
+        <rdfs:range rdf:resource="http://www.yuxin.com/law/ontologies/2022/Jurisdiction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/sollicitor -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/sollicitor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+        <rdfs:range rdf:resource="http://www.yuxin.com/law/ontologies/2022/Sollicitor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/status -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/status">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/title -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/title">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/topic -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/topic">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/uploadDate -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/uploadDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.yuxin.com/law/ontologies/2022/Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/versionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/versionOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/year -->
+
+    <owl:ObjectProperty rdf:about="http://www.yuxin.com/law/ontologies/2022/year">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/Act -->
+
+    <owl:Class rdf:about="http://www.yuxin.com/law/ontologies/2022/Act">
+        <rdfs:subClassOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/Statue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/Case -->
+
+    <owl:Class rdf:about="http://www.yuxin.com/law/ontologies/2022/Case"/>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/Convention -->
+
+    <owl:Class rdf:about="http://www.yuxin.com/law/ontologies/2022/Convention">
+        <rdfs:subClassOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/Statue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/Defendant -->
+
+    <owl:Class rdf:about="http://www.yuxin.com/law/ontologies/2022/Defendant">
+        <rdfs:subClassOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/Directive -->
+
+    <owl:Class rdf:about="http://www.yuxin.com/law/ontologies/2022/Directive">
+        <rdfs:subClassOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/Statue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/Instrument -->
+
+    <owl:Class rdf:about="http://www.yuxin.com/law/ontologies/2022/Instrument">
+        <rdfs:subClassOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/Statue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/IrishAppealCourt -->
+
+    <owl:Class rdf:about="http://www.yuxin.com/law/ontologies/2022/IrishAppealCourt">
+        <rdfs:subClassOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/Jurisdiction"/>
+        <owl:disjointWith rdf:resource="http://www.yuxin.com/law/ontologies/2022/IrishHighCourt"/>
+        <owl:disjointWith rdf:resource="http://www.yuxin.com/law/ontologies/2022/IrishSupremeCourt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/IrishHighCourt -->
+
+    <owl:Class rdf:about="http://www.yuxin.com/law/ontologies/2022/IrishHighCourt">
+        <rdfs:subClassOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/Jurisdiction"/>
+        <owl:disjointWith rdf:resource="http://www.yuxin.com/law/ontologies/2022/IrishSupremeCourt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/IrishSupremeCourt -->
+
+    <owl:Class rdf:about="http://www.yuxin.com/law/ontologies/2022/IrishSupremeCourt">
+        <rdfs:subClassOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/Jurisdiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/Judge -->
+
+    <owl:Class rdf:about="http://www.yuxin.com/law/ontologies/2022/Judge">
+        <rdfs:subClassOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/Jurisdiction -->
+
+    <owl:Class rdf:about="http://www.yuxin.com/law/ontologies/2022/Jurisdiction"/>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/Person -->
+
+    <owl:Class rdf:about="http://www.yuxin.com/law/ontologies/2022/Person"/>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/Plaintiff -->
+
+    <owl:Class rdf:about="http://www.yuxin.com/law/ontologies/2022/Plaintiff">
+        <rdfs:subClassOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/Regulation -->
+
+    <owl:Class rdf:about="http://www.yuxin.com/law/ontologies/2022/Regulation">
+        <rdfs:subClassOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/Statue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/Sollicitor -->
+
+    <owl:Class rdf:about="http://www.yuxin.com/law/ontologies/2022/Sollicitor">
+        <rdfs:subClassOf rdf:resource="http://www.yuxin.com/law/ontologies/2022/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.yuxin.com/law/ontologies/2022/Statue -->
+
+    <owl:Class rdf:about="http://www.yuxin.com/law/ontologies/2022/Statue"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

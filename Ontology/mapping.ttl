@@ -1,0 +1,776 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rrf: <http://kdeg.scss.tcd.ie/ns/rrf#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ono: <http://www.yuxin.com/law/ontologies/2022/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@base <http://example.com/ns#>.
+
+
+<#getYear>
+rrf:functionName "getyear" ;
+	rrf:functionBody """
+		function getyear(citation) {
+      var year = citation.split("_")[0];
+			return year;
+        }
+	""" ;
+.
+
+<#addPrefixA>
+rrf:functionName "addprefixA" ;
+	rrf:functionBody """
+		function addprefixA(judge_id) {
+      return "a" + judge_id
+        }
+	""" ;
+.
+
+<#addPrefixC>
+rrf:functionName "addprefixC" ;
+	rrf:functionBody """
+		function addprefixC(instrument_id) {
+      return "c" + instrument_id
+        }
+	""" ;
+.
+
+<#addPrefixP>
+rrf:functionName "addprefixP" ;
+	rrf:functionBody """
+		function addprefixP(case_id) {
+      return "p" + case_id
+        }
+	""" ;
+.
+
+<#addPrefixT>
+rrf:functionName "addprefixT" ;
+	rrf:functionBody """
+		function addprefixT(citation_id) {
+      return "t" + citation_id
+        }
+	""" ;
+.
+
+<#CaseMapping> a rr:TriplesMap;
+  rr:logicalTable [ rr:tableName "case_all_with_topic_id"] ;
+
+  rr:subjectMap [
+    rr:template "http://www.yuxin.com/law/Case/{Neutral Citation}";
+    rr:termType rr:IRI;
+    rr:class ono:Case
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rr:column "Neutral Citation";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:deliverDate;
+    rr:objectMap [
+      rr:column "Date Delivered";
+      rr:datatype xsd:date;
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:uploadDate;
+    rr:objectMap [
+      rr:column "Date Uploaded";
+      rr:datatype xsd:date;
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:status;
+    rr:objectMap [
+      rr:column "STATUS"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:result;
+    rr:objectMap [
+      rr:column "RESULT"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:title;
+    rr:objectMap [
+      rr:column "TITLE"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:hasLink;
+    rr:objectMap [
+      rr:column "Case Link"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:topic;
+    rr:objectMap [
+      rr:column "TOPIC"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:year;
+    rr:objectMap [
+      rrf:functionCall [
+			rrf:function <#getYear> ;
+				rrf:parameterBindings (
+					[ rr:column "Neutral Citation" ]
+				) ;
+			] ;
+		] ;
+  ];
+  
+  rr:predicateObjectMap [
+  rr:predicate ono:jurisdiction;
+  rr:objectMap [
+    rr:template "http://www.yuxin.com/law/Jurisdiction/{COURT}";
+    rr:termType rr:IRI;
+    rr:class ono:Jurisdiction
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:hasCitationID;
+    rr:objectMap [
+      rrf:functionCall [
+			rrf:function <#addPrefixP> ;
+				rrf:parameterBindings (
+					[ rr:column "Neutral Citation ID" ]
+				) ;
+			] ;
+		] ;
+  ];
+
+  rr:predicateObjectMap [
+		rr:predicate ono:plaintiff;
+		rr:objectMap [
+            rr:parentTriplesMap <#PlaintiffMapping> ;
+			      rr:joinCondition [ rr:child "PLAINTIFF" ; rr:parent "PLAINTIFF" ; ] ;
+        ] ;
+	];
+
+  rr:predicateObjectMap [
+	  rr:predicate ono:defendant;
+	  rr:objectMap [
+            rr:parentTriplesMap <#DefendantMapping> ;
+			      rr:joinCondition [ rr:child "DEFENDANT" ; rr:parent "DEFENDANT" ; ] ;
+        ] ;
+	];
+.
+
+<#PlaintiffMapping> a rr:TriplesMap ;
+  rr:logicalTable [ rr:tableName "case_all_with_topic_id"] ;
+
+  rr:subjectMap [
+    rr:template "http://www.yuxin.com/law/Plaintiff/{PLAINTIFF}";
+    rr:termType rr:IRI;
+    rr:class ono:Plaintiff
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [
+      rr:column "PLAINTIFF";
+    ]
+  ];
+.
+
+<#DefendantMapping> a rr:TriplesMap ;
+  rr:logicalTable [ rr:tableName "case_all_with_topic_id"] ;
+
+  rr:subjectMap [
+    rr:template "http://www.yuxin.com/law/Defendant/{DEFENDANT}";
+    rr:termType rr:IRI;
+    rr:class ono:Defendant
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [
+      rr:column "DEFENDANT";
+    ]
+  ];
+.
+
+<#CitationtMapping> a rr:TriplesMap ;
+  rr:logicalTable [ rr:tableName "citation"] ;
+
+  rr:subjectMap [
+    rr:template "http://www.yuxin.com/law/Case/{CITATION}";
+    rr:termType rr:IRI;
+    rr:class ono:Case
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [
+      rr:column "CITATION";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:hasCitationID;
+    rr:objectMap [
+      rrf:functionCall [
+			rrf:function <#addPrefixT> ;
+				rrf:parameterBindings (
+					[ rr:column "Citation ID" ]
+				) ;
+			] ;
+		] ;
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:citedBy;
+  rr:objectMap [
+    rr:template "http://www.yuxin.com/law/Case/{Neutral Citation}";
+    rr:termType rr:IRI;
+    rr:class ono:Case
+    ]
+  ]
+.
+
+<#JudgeMapping> a rr:TriplesMap ;
+  rr:logicalTable [ rr:tableName "judge_link"] ;
+
+  rr:subjectMap [
+    rr:template "http://www.yuxin.com/law/Judge/{JUDGE}";
+    rr:termType rr:IRI;
+    rr:class ono:Judge
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [
+      rr:column "JUDGE";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:hasLink;
+  rr:objectMap [
+      rr:column "LINK";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:hasJudgeID;
+    rr:objectMap [
+      rrf:functionCall [
+			rrf:function <#addPrefixA> ;
+				rrf:parameterBindings (
+					[ rr:column "Judge ID" ]
+				) ;
+			] ;
+		] ;
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:serveAt;
+  rr:objectMap [
+    rr:template "http://www.yuxin.com/law/Jurisdiction/{COURT}";
+    rr:termType rr:IRI;
+    rr:class ono:Jurisdiction
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:judge;
+  rr:objectMap [
+    rr:template "http://www.yuxin.com/law/Case/{Neutral Citation}";
+    rr:termType rr:IRI;
+    rr:class ono:Case
+    ]
+  ]
+.
+
+<#CourtMapping> a rr:TriplesMap ;
+  rr:logicalTable [ rr:tableName "court"] ;
+
+  rr:subjectMap [
+    rr:template "http://www.yuxin.com/law/Jurisdiction/{COURT}";
+    rr:termType rr:IRI;
+    rr:class ono:Jurisdiction
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [
+      rr:column "COURT";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:address;
+  rr:objectMap [
+      rr:column "ADDRESS";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:phone;
+  rr:objectMap [
+      rr:column "PHONE";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:email;
+  rr:objectMap [
+      rr:column "EMAIL";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:openDuring;
+  rr:objectMap [
+      rr:column "Opening Hours";
+    ]
+  ];
+.
+
+<#ActMapping> a rr:TriplesMap ;
+  rr:logicalTable [ rr:tableName "act"] ;
+
+  rr:subjectMap [
+    rr:template "http://www.yuxin.com/law/Statue/{INSTRUMENT}";
+    rr:termType rr:IRI;
+    rr:class ono:Act
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [
+      rr:column "INSTRUMENT";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:versionOf;
+  rr:objectMap [
+      rr:column "STATUE";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:year;
+  rr:objectMap [
+      rr:column "YEAR";
+      rr:datatype xsd:year
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:detail;
+  rr:objectMap [
+      rr:column "DETAIL";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:hasLink;
+  rr:objectMap [
+      rr:column "Instrument Link";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:hasInstrumentID;
+    rr:objectMap [
+      rrf:functionCall [
+			rrf:function <#addPrefixC> ;
+				rrf:parameterBindings (
+					[ rr:column "Instrument ID" ]
+				) ;
+			] ;
+		] ;
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:hasStatueID;
+    rr:objectMap [
+      rrf:functionCall [
+			rrf:function <#addPrefixC> ;
+				rrf:parameterBindings (
+					[ rr:column "Statue ID" ]
+				) ;
+			] ;
+		] ;
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:citedBy;
+  rr:objectMap [
+    rr:template "http://www.yuxin.com/law/Case/{Neutral Citation}";
+    rr:termType rr:IRI;
+    rr:class ono:Case
+    ]
+  ]
+.
+
+<#DirectiveMapping> a rr:TriplesMap ;
+  rr:logicalTable [ rr:tableName "directive"] ;
+
+  rr:subjectMap [
+    rr:template "http://www.yuxin.com/law/Statue/{INSTRUMENT}";
+    rr:termType rr:IRI;
+    rr:class ono:Directive
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [
+      rr:column "INSTRUMENT";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:versionOf;
+  rr:objectMap [
+      rr:column "STATUE";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:year;
+  rr:objectMap [
+      rr:column "YEAR";
+      rr:datatype xsd:year
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:detail;
+  rr:objectMap [
+      rr:column "DETAIL";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:hasLink;
+  rr:objectMap [
+      rr:column "Instrument Link";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:hasInstrumentID;
+    rr:objectMap [
+      rrf:functionCall [
+			rrf:function <#addPrefixC> ;
+				rrf:parameterBindings (
+					[ rr:column "Instrument ID" ]
+				) ;
+			] ;
+		] ;
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:hasStatueID;
+    rr:objectMap [
+      rrf:functionCall [
+			rrf:function <#addPrefixC> ;
+				rrf:parameterBindings (
+					[ rr:column "Statue ID" ]
+				) ;
+			] ;
+		] ;
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:citedBy;
+  rr:objectMap [
+    rr:template "http://www.yuxin.com/law/Case/{Neutral Citation}";
+    rr:termType rr:IRI;
+    rr:class ono:Case
+    ]
+  ]
+.
+
+<#RegulationMapping> a rr:TriplesMap ;
+  rr:logicalTable [ rr:tableName "regulation"] ;
+
+  rr:subjectMap [
+    rr:template "http://www.yuxin.com/law/Statue/{INSTRUMENT}";
+    rr:termType rr:IRI;
+    rr:class ono:Regulation
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [
+      rr:column "INSTRUMENT";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:versionOf;
+  rr:objectMap [
+      rr:column "STATUE";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:year;
+  rr:objectMap [
+      rr:column "YEAR";
+      rr:datatype xsd:year
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:detail;
+  rr:objectMap [
+      rr:column "DETAIL";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:hasLink;
+  rr:objectMap [
+      rr:column "Instrument Link";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:hasInstrumentID;
+    rr:objectMap [
+      rrf:functionCall [
+			rrf:function <#addPrefixC> ;
+				rrf:parameterBindings (
+					[ rr:column "Instrument ID" ]
+				) ;
+			] ;
+		] ;
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:hasStatueID;
+    rr:objectMap [
+      rrf:functionCall [
+			rrf:function <#addPrefixC> ;
+				rrf:parameterBindings (
+					[ rr:column "Statue ID" ]
+				) ;
+			] ;
+		] ;
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:citedBy;
+  rr:objectMap [
+    rr:template "http://www.yuxin.com/law/Case/{Neutral Citation}";
+    rr:termType rr:IRI;
+    rr:class ono:Case
+    ]
+  ]
+.
+
+<#ConventionMapping> a rr:TriplesMap ;
+  rr:logicalTable [ rr:tableName "convention"] ;
+
+  rr:subjectMap [
+    rr:template "http://www.yuxin.com/law/Statue/{INSTRUMENT}";
+    rr:termType rr:IRI;
+    rr:class ono:Convention
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [
+      rr:column "INSTRUMENT";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:versionOf;
+  rr:objectMap [
+      rr:column "STATUE";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:year;
+  rr:objectMap [
+      rr:column "YEAR";
+      rr:datatype xsd:year
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:detail;
+  rr:objectMap [
+      rr:column "DETAIL";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:hasLink;
+  rr:objectMap [
+      rr:column "Instrument Link";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:hasInstrumentID;
+    rr:objectMap [
+      rrf:functionCall [
+			rrf:function <#addPrefixC> ;
+				rrf:parameterBindings (
+					[ rr:column "Instrument ID" ]
+				) ;
+			] ;
+		] ;
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:hasStatueID;
+    rr:objectMap [
+      rrf:functionCall [
+			rrf:function <#addPrefixC> ;
+				rrf:parameterBindings (
+					[ rr:column "Statue ID" ]
+				) ;
+			] ;
+		] ;
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:citedBy;
+  rr:objectMap [
+    rr:template "http://www.yuxin.com/law/Case/{Neutral Citation}";
+    rr:termType rr:IRI;
+    rr:class ono:Case
+    ]
+  ]
+.
+
+<#InstrumentMapping> a rr:TriplesMap ;
+  rr:logicalTable [ rr:tableName "instrument"] ;
+
+  rr:subjectMap [
+    rr:template "http://www.yuxin.com/law/Statue/{INSTRUMENT}";
+    rr:termType rr:IRI;
+    rr:class ono:Instrument
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate rdfs:label;
+  rr:objectMap [
+      rr:column "INSTRUMENT";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:versionOf;
+  rr:objectMap [
+      rr:column "STATUE";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:year;
+  rr:objectMap [
+      rr:column "YEAR";
+      rr:datatype xsd:year
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:detail;
+  rr:objectMap [
+      rr:column "DETAIL";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:hasLink;
+  rr:objectMap [
+      rr:column "Instrument Link";
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:hasInstrumentID;
+    rr:objectMap [
+      rrf:functionCall [
+			rrf:function <#addPrefixC> ;
+				rrf:parameterBindings (
+					[ rr:column "Instrument ID" ]
+				) ;
+			] ;
+		] ;
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ono:hasStatueID;
+    rr:objectMap [
+      rrf:functionCall [
+			rrf:function <#addPrefixC> ;
+				rrf:parameterBindings (
+					[ rr:column "Statue ID" ]
+				) ;
+			] ;
+		] ;
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:citedBy;
+  rr:objectMap [
+    rr:template "http://www.yuxin.com/law/Case/{Neutral Citation}";
+    rr:termType rr:IRI;
+    rr:class ono:Case
+    ]
+  ]
+.
+
+<#CitationInverseMapping> a rr:TriplesMap ;
+  rr:logicalTable [ rr:tableName "citation"] ;
+
+  rr:subjectMap [
+    rr:template "http://www.yuxin.com/law/Case/{Neutral Citation}";
+    rr:termType rr:IRI;
+    rr:class ono:Case
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:citeCase;
+  rr:objectMap [
+    rr:template "http://www.yuxin.com/law/Case/{CITATION}";
+    rr:termType rr:IRI;
+    rr:class ono:Case
+    ]
+  ]
+.
+
+<#StatueInverseMapping> a rr:TriplesMap ;
+  rr:logicalTable [ rr:tableName "instrument_link"] ;
+
+  rr:subjectMap [
+    rr:template "http://www.yuxin.com/law/Case/{Neutral Citation}";
+    rr:termType rr:IRI;
+    rr:class ono:Case
+  ];
+
+  rr:predicateObjectMap [
+  rr:predicate ono:citeStatue;
+  rr:objectMap [
+    rr:template "http://www.yuxin.com/law/Statue/{INSTRUMENT}";
+    rr:termType rr:IRI;
+    rr:class ono:Statue
+    ]
+  ]
+.
